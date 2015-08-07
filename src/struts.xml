@@ -7,7 +7,7 @@
  
   <constant name="struts.devMode" value="false" />
  <constant name="struts.custom.i18n.resources" value="global" />
- <constant name="struts.i18n.encoding" value="GBK" />
+ <constant name="struts.i18n.encoding" value="UTF-8" />
   <package name="basicstruts2" extends="struts-default">
     <action name="index">
       <result>/index.jsp</result>
