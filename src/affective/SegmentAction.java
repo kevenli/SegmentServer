@@ -11,6 +11,8 @@ public class SegmentAction {
 	private String text;
 	private float result;
 	
+	private static Segment segment = new Segment();
+	
 	public String execute() throws Exception {
         System.out.println(Thread.currentThread().getContextClassLoader().getResource(""));  
         
@@ -23,8 +25,7 @@ public class SegmentAction {
         System.out.println(new File("/").getAbsolutePath());  
         System.out.println(System.getProperty("user.dir"));  
         
-		Segment s = new Segment();
-		result = s.analysis(text);
+		result = segment.analysis(text);
 		JSONObject jsonObject=new JSONObject();
         jsonObject.accumulate("status", "ok");
         jsonObject.accumulate("data", result);
