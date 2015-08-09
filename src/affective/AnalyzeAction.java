@@ -7,7 +7,7 @@ import org.apache.struts2.ServletActionContext;
 
 import com.gta.affective.Segment;
 
-public class SegmentAction {
+public class AnalyzeAction {
 	private String text;
 	private float result;
 	
@@ -16,11 +16,11 @@ public class SegmentAction {
 	public String execute() throws Exception {
         System.out.println(Thread.currentThread().getContextClassLoader().getResource(""));  
         
-        System.out.println(SegmentAction.class.getClassLoader().getResource(""));  
+        System.out.println(Segment.class.getClassLoader().getResource(""));  
   
         System.out.println(ClassLoader.getSystemResource(""));  
-        System.out.println(SegmentAction.class.getResource(""));  
-        System.out.println(SegmentAction.class.getResource("/"));
+        System.out.println(AnalyzeAction.class.getResource(""));  
+        System.out.println(AnalyzeAction.class.getResource("/"));
         //Class文件所在路径
         System.out.println(new File("/").getAbsolutePath());  
         System.out.println(System.getProperty("user.dir"));  
